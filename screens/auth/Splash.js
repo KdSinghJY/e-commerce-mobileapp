@@ -10,6 +10,7 @@ const Splash = ({ navigation }) => {
   _retrieveData = async () => {
     try {
       const value = await AsyncStorage.getItem("authUser");
+      console.log("spolash Value", value);
       if (value !== null) {
         let user = JSON.parse(value); // covert the authUser value to json
         if (user.userType === "ADMIN") {
